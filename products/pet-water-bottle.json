@@ -1,0 +1,44 @@
+{
+  "product": {
+    "id": "gid://shopify/Product/1",
+    "title": "Botella de Agua Portátil para Perros y Gatos",
+    "description": "Botella de agua portátil para perros y gatos. Diseñada para uso en exteriores, esta botella de 500ml ofrece una solución práctica para mantener a tu mascota hidratada durante paseos, viajes o actividades al aire libre. Incluye un compartimento para almacenar comida, ideal para cachorros o mascotas que necesitan alimentación en movimiento.",
+    "vendor": "Pet Supplies Co",
+    "productType": "Pet Accessories",
+    "price": 8.79,
+    "currency": "EUR",
+    "rating": 4.8,
+    "reviews": 293,
+    "unitsSold": 2000,
+    "features": [
+      "Botella de agua portátil de 500ml",
+      "Almacenamiento de alimentos integrado",
+      "Contenedor de agua y cuenco alimentador combinado",
+      "Material seguro sin sustancias químicas peligrosas",
+      "Diseño universal para diferentes razas",
+      "Ideal para paseos, viajes y actividades al aire libre"
+    ],
+    "colors": [
+      "Pink",
+      "Grey",
+      "Green",
+      "Yellow"
+    ],
+    "specifications": {
+      "capacity": "500ml",
+      "material": "Food-grade plastic",
+      "weight": "150g",
+      "dimensions": "8cm x 8cm x 15cm",
+      "compatibility": "Dogs and cats of all sizes"
+    },
+    "tags": [
+      "pet-water-bottle",
+      "pet-supplies",
+      "dog-accessories",
+      "cat-accessories",
+      "portable",
+      "outdoor",
+      "travel"
+    ]
+  }
+}
