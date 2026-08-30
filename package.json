@@ -1,0 +1,52 @@
+{
+  "name": "pet-water-bottle-shopify",
+  "version": "1.0.0",
+  "description": "Shopify store selling portable pet water bottles with integrated food containers for dogs and cats",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev",
+    "build": "shopify theme build",
+    "push": "shopify theme push",
+    "pull": "shopify theme pull",
+    "watch": "shopify theme watch",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "shopify",
+    "pet",
+    "water-bottle",
+    "ecommerce",
+    "store"
+  ],
+  "author": "AquilesPan",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/cli": "^3.50.0",
+    "@shopify/theme": "^3.50.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AquilesPan/pet-water-bottle-shopify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AquilesPan/pet-water-bottle-shopify/issues"
+  },
+  "homepage": "https://github.com/AquilesPan/pet-water-bottle-shopify#readme"
+}
