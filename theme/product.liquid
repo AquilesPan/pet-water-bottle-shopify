@@ -1,0 +1,186 @@
+{% assign product = page %}
+
+<div class="product-container">
+  <div class="product-images">
+    {% for image in product.images %}
+      <img src="{{ image.src }}" alt="{{ product.title }}" class="product-image">
+    {% endfor %}
+  </div>
+
+  <div class="product-details">
+    <h1>{{ product.title }}</h1>
+    
+    <div class="product-rating">
+      <span class="rating">{{ product.rating }}/5</span>
+      <span class="reviews">({{ product.reviews }} reviews)</span>
+      <span class="sold">{{ product.unitsSold }}+ sold</span>
+    </div>
+
+    <div class="product-price">
+      <h2>€{{ product.price }}</h2>
+      <p>Price includes VAT | Tariffs calculated at checkout</p>
+    </div>
+
+    <div class="product-description">
+      <h3>Product Description</h3>
+      <p>{{ product.description }}</p>
+    </div>
+
+    <div class="product-features">
+      <h3>Key Features</h3>
+      <ul>
+        {% for feature in product.features %}
+          <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="color-selector">
+      <h3>Select Color</h3>
+      <div class="color-options">
+        {% for color in product.colors %}
+          <button class="color-btn" data-color="{{ color }}">
+            <span class="color-label">{{ color }}</span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="specifications">
+      <h3>Specifications</h3>
+      <table>
+        <tr>
+          <td>Capacity</td>
+          <td>{{ product.specifications.capacity }}</td>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>{{ product.specifications.material }}</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>{{ product.specifications.weight }}</td>
+        </tr>
+        <tr>
+          <td>Dimensions</td>
+          <td>{{ product.specifications.dimensions }}</td>
+        </tr>
+        <tr>
+          <td>Compatibility</td>
+          <td>{{ product.specifications.compatibility }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="add-to-cart">
+      <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .product-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-rating {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .product-price h2 {
+    font-size: 1.8rem;
+    color: #28a745;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-features ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .product-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .color-options {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .color-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .color-btn:hover {
+    border-color: #333;
+  }
+
+  .specifications table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+  }
+
+  .specifications td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .specifications td:first-child {
+    font-weight: bold;
+    width: 40%;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .product-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
